@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about', as: 'about'
   #gets pages/about.html.erb
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   #gives posts resources
 
 end
